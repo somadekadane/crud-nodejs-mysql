@@ -2,7 +2,7 @@
 
 const mysql = require('mysql2'); 
 
-const con = mysql.createConnection({
+const connection = mysql.createConnection({
     host:"127.0.0.1",
     post:"3306",
     user: 'root', // seu usuário MySQL 

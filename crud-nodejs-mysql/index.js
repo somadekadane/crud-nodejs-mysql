@@ -8,7 +8,7 @@ const PORT = 5010;
 app.use(bodyParser.json()); 
 app.use('/api', userRoutes); 
 
-app.listen(PORT, () => { 
+app.listen(5010, () => { 
  console.log(`Servidor rodando na porta ${PORT}`); 
 }); 
 

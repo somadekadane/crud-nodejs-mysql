@@ -4,10 +4,10 @@ const db = require('../db/connection');
 // CREATE 
 exports.createUser = (req, res) => { 
  const { nome_usuario, email_usuario, senha_usuario } = req.body; 
- const sql = 'INSERT INTO usuarios (nome_usuario, email_usuario, senha_usuario) VALUES (?, ?, ?,?)'; 
+ const sql = 'INSERT INTO usuarios (nome_usuario, email_usuario, senha_usuario) VALUES (?, ?, ?)'; 
  db.query(sql, [nome_usuario, email_usuario, senha_usuario], (err, result) => { 
  if (err) return res.status(500).send(err); 
- res.status(201).json({ id: result.insertId, name, email }); 
+ res.status(201).json({ id: result.insertId, nome_usuario, email_usuario }); 
  }); 
 }; 
 
